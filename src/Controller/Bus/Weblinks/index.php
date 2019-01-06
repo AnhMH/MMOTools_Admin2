@@ -13,11 +13,9 @@ $this->Breadcrumb->setTitle($pageTitle)
         ));
 
 // Create search form
-$languageType = Configure::read('Config.languageType');
 $param = $this->getParams(array(
     'limit' => $pageSize,
-    'disable' => 0,
-    'language_type' => 1
+    'disable' => 0
 ));
 $dataSearch = array(
     'limit' => $pageSize
@@ -28,11 +26,6 @@ $this->SearchForm
         ->addElement(array(
             'id' => 'name',
             'label' => __('LABEL_NAME')
-        ))
-        ->addElement(array(
-            'id' => 'language_type',
-            'label' => __('Ngôn ngữ'),
-            'options' => $languageType
         ))
         ->addElement(array(
             'id' => 'limit',
