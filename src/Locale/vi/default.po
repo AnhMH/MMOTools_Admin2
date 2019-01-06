@@ -366,3 +366,12 @@ msgstr "Danh sách website liên kết"
 
 msgid "LABEL_WEBLINK_UPDATE"
 msgstr "Cập nhật website liên kết"
+
+msgid "LABEL_FB_ACCOUNT_MANAGEMENT"
+msgstr "Quản lý TK FB"
+
+msgid "LABEL_FB_ACCOUNT_LIST"
+msgstr "Danh sách TK FB"
+
+msgid "LABEL_TOKEN"
+msgstr "Token"

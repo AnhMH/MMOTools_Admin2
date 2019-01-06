@@ -48,7 +48,8 @@ Configure::write('API.url_weblinks_detail', 'weblinks/detail');
 Configure::write('API.url_weblinks_addupdate', 'weblinks/addupdate');
 Configure::write('API.url_weblinks_all', 'weblinks/all');
 
-Configure::write('API.url_posts_list', 'posts/list');
-Configure::write('API.url_posts_detail', 'posts/detail');
-Configure::write('API.url_posts_addupdate', 'posts/addupdate');
-Configure::write('API.url_posts_all', 'posts/all');
+Configure::write('API.url_fbaccounts_list', 'fbaccounts/list');
+Configure::write('API.url_fbaccounts_detail', 'fbaccounts/detail');
+Configure::write('API.url_fbaccounts_addupdate', 'fbaccounts/addupdate');
+Configure::write('API.url_fbaccounts_all', 'fbaccounts/all');
+Configure::write('API.url_fbaccounts_addtoken', 'fbaccounts/addtoken');

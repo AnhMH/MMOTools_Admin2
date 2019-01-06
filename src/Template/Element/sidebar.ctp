@@ -19,10 +19,10 @@
                 </a>
             </li>
             
-            <li class="<?php if (in_array($controller, array('posts'))) echo ' active ' ?>">
-                <a href="<?php echo $BASE_URL; ?>/posts">
+            <li class="<?php if (in_array($controller, array('fbaccounts'))) echo ' active ' ?>">
+                <a href="<?php echo $BASE_URL; ?>/fbaccounts">
                     <i class="fa fa-newspaper-o"></i>
-                    <span><?php echo __('LABEL_POST_MANAGEMENT'); ?></span>
+                    <span><?php echo __('LABEL_FB_ACCOUNT_MANAGEMENT'); ?></span>
                 </a>
             </li>
             
