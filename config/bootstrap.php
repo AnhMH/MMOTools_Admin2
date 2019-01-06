@@ -246,6 +246,22 @@ Configure::write('Config.searchStatus', array(
     0 => __('LABEL_ACTIVE'),
     1 => __('LABEL_INACTIVE'),
 ));
+Configure::write('Config.noYes', array(
+    0 => __('No'),
+    1 => __('Yes'),
+));
+Configure::write('Config.timeRepeat', array(
+    5*60 => '5 phút',
+    10*60 => '10 phút',
+    20*60 => '20 phút',
+    30*60 => '30 phút',
+    60*60 => '1 giờ',
+    2*60*60 => '2 giờ',
+    3*60*60 => '3 giờ',
+    4*60*60 => '4 giờ',
+    6*60*60 => '6 giờ',
+    12*60*60 => '12 giờ'
+));
 Configure::write('Config.homePosition', array(
     0 => __('Không hiển thị'),
     1 => __('Vị trí 1'),

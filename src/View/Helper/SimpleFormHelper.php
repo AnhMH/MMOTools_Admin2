@@ -83,7 +83,7 @@ class SimpleFormHelper extends AppHelper {
                 $btnCount++;
                 continue;
             }
-            if ($controlType !== 'file' && $controlType !== 'hidden' && $controlType !== 'password') {
+            if ($controlType !== 'file' && $controlType !== 'hidden' && $controlType !== 'password' && $controlType !== 'textarea') {
                 unset($control['type']);
             }
             if ($controlType == 'label') {
@@ -91,6 +91,8 @@ class SimpleFormHelper extends AppHelper {
             } elseif ($controlType == 'submit') {
                 $html .= $this->Form->submit($control['value'], $control);
             } elseif ($controlType == 'password') {
+                $html .= $this->Form->input($control['id'], $control);
+            } elseif ($controlType == 'textarea') {
                 $html .= $this->Form->input($control['id'], $control);
             } elseif ($controlType == 'editor') {
                 $html .= $this->Common->editor($control);

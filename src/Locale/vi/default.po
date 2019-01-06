@@ -375,3 +375,27 @@ msgstr "Danh sách TK FB"
 
 msgid "LABEL_TOKEN"
 msgstr "Token"
+
+msgid "LABEL_FB_POST_ID"
+msgstr "Post ID"
+
+msgid "LABEL_FB_ACCOUNT"
+msgstr "FB Account"
+
+msgid "LABEL_IS_REPEAT"
+msgstr "Lặp lại"
+
+msgid "LABEL_TIME_REPEAT"
+msgstr "Thời gian lặp"
+
+msgid "LABEL_IS_COMMENT"
+msgstr "Đã comment"
+
+msgid "LABEL_AUTO_COMMENT_MANAGEMENT"
+msgstr "Quản lý auto comment"
+
+msgid "LABEL_FB_AUTO_COMMENT_LIST"
+msgstr "Danh sách auto comment"
+
+msgid "LABEL_FB_AUTO_COMMENT_UPDATE"
+msgstr "Cập nhật auto comment"
