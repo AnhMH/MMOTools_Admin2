@@ -262,6 +262,11 @@ Configure::write('Config.timeRepeat', array(
     6*60*60 => '6 giờ',
     12*60*60 => '12 giờ'
 ));
+Configure::write('Config.autoCommentTypes', array(
+    1 => __('Bài viết'),
+    2 => __('Trang'),
+    3 => __('Profile')
+));
 Configure::write('Config.homePosition', array(
     0 => __('Không hiển thị'),
     1 => __('Vị trí 1'),

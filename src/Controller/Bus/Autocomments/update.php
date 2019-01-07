@@ -53,8 +53,13 @@ $this->UpdateForm->reset()
         'required' => true,
     ))
     ->addElement(array(
+        'id' => 'type',
+        'label' => __('LABEL_TYPE'),
+        'options' => Configure::read('Config.autoCommentTypes')
+    ))
+    ->addElement(array(
         'id' => 'fb_postid',
-        'label' => __('LABEL_FB_POST_ID'),
+        'label' => __('LABEL_FB_TARGET_ID'),
         'type' => 'text'
     ))
     ->addElement(array(

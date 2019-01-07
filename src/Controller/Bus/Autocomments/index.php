@@ -66,7 +66,7 @@ $this->SimpleTable
         ))
         ->addColumn(array(
             'id' => 'fb_id',
-            'title' => __('LABEL_FB_POST_ID'),
+            'title' => __('LABEL_FB_TARGET_ID'),
             'type' => 'link',
             'href' => 'https://facebook.com/'.'{fb_id}',
             'target' => '_blank',
@@ -95,6 +95,17 @@ $this->SimpleTable
             'title' => __('LABEL_IS_COMMENT'),
             'rules' => Configure::read('Config.noYes'),
             'empty' => 'No'
+        ))
+        ->addColumn(array(
+            'id' => 'total_comment',
+            'title' => __('LABEL_TOTAL_COMMENT'),
+            'empty' => '0'
+        ))
+        ->addColumn(array(
+            'id' => 'type',
+            'title' => __('LABEL_TYPE'),
+            'rules' => Configure::read('Config.autoCommentTypes'),
+            'empty' => '-'
         ))
         ->addColumn(array(
             'id' => 'created',

@@ -368,7 +368,7 @@ msgid "LABEL_WEBLINK_UPDATE"
 msgstr "Cập nhật website liên kết"
 
 msgid "LABEL_FB_ACCOUNT_MANAGEMENT"
-msgstr "Quản lý TK FB"
+msgstr "FB Accounts"
 
 msgid "LABEL_FB_ACCOUNT_LIST"
 msgstr "Danh sách TK FB"
@@ -392,10 +392,16 @@ msgid "LABEL_IS_COMMENT"
 msgstr "Đã comment"
 
 msgid "LABEL_AUTO_COMMENT_MANAGEMENT"
-msgstr "Quản lý auto comment"
+msgstr "Auto comment"
 
 msgid "LABEL_FB_AUTO_COMMENT_LIST"
 msgstr "Danh sách auto comment"
 
 msgid "LABEL_FB_AUTO_COMMENT_UPDATE"
 msgstr "Cập nhật auto comment"
+
+msgid "LABEL_TOTAL_COMMENT"
+msgstr "Tổng số comment"
+
+msgid "LABEL_FB_TARGET_ID"
+msgstr "Target ID"
