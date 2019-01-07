@@ -57,5 +57,6 @@ Configure::write('API.url_fbaccounts_addtoken', 'fbaccounts/addtoken');
 Configure::write('API.url_autocomments_list', 'autocomments/list');
 Configure::write('API.url_autocomments_detail', 'autocomments/detail');
 Configure::write('API.url_autocomments_addupdate', 'autocomments/addupdate');
+Configure::write('API.url_autocomments_addupdatemulti', 'autocomments/addupdatemulti');
 Configure::write('API.url_autocomments_all', 'autocomments/all');
 Configure::write('API.url_autocomments_addtoken', 'autocomments/addtoken');

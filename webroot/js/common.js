@@ -32,6 +32,14 @@ $(document).ready(function ($) {
         }
         return false;
     });
+    $(".btn-addnew-multi").click(function () {
+        if (controller == 'orders') {
+            location.href = baseUrl + '/' + controller + '/add';
+        } else {
+            location.href = baseUrl + '/' + controller + '/updatemulti';
+        }
+        return false;
+    });
     $(".btn-order-sell").click(function () {
         location.href = baseUrl + '/' + controller + '/add?type=1';
         return false;

@@ -405,3 +405,6 @@ msgstr "Tổng số comment"
 
 msgid "LABEL_FB_TARGET_ID"
 msgstr "Target ID"
+
+msgid "LABEL_ADD_NEW_MULTI"
+msgstr "Thêm hàng loạt"

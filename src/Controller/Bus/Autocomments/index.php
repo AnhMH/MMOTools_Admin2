@@ -139,6 +139,11 @@ $this->SimpleTable
         ))
         ->addButton(array(
             'type' => 'submit',
+            'value' => __('LABEL_ADD_NEW_MULTI'),
+            'class' => 'btn btn-success btn-addnew-multi',
+        ))
+        ->addButton(array(
+            'type' => 'submit',
             'value' => __('LABEL_DELETE'),
             'class' => 'btn btn-danger btn-disable',
         ));
