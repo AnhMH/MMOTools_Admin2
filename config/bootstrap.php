@@ -286,7 +286,7 @@ if ($env == 'production') {
     include_once ('development/bootstrap.php');
 }
 
-define('DEFAULT_SITE_TITLE', 'ChuaPhoBi Admin');
+define('DEFAULT_SITE_TITLE', 'MMO Tools '.date('Y'));
 if (!defined('USE_SUB_DIRECTORY')) {
     define('USE_SUB_DIRECTORY', '');
 }
