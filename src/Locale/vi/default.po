@@ -367,6 +367,12 @@ msgstr "Danh sách website liên kết"
 msgid "LABEL_WEBLINK_UPDATE"
 msgstr "Cập nhật website liên kết"
 
+msgid "LABEL_LINK_LIST"
+msgstr "Danh sách liên kết"
+
+msgid "LABEL_LINK_UPDATE"
+msgstr "Cập nhật liên kết"
+
 msgid "LABEL_FB_ACCOUNT_MANAGEMENT"
 msgstr "FB Accounts"
 

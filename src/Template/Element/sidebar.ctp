@@ -33,22 +33,8 @@
                 </a>
             </li>
             
-            <li class="<?php if (in_array($controller, array('cates'))) echo ' active ' ?>">
-                <a href="<?php echo $BASE_URL;?>/cates">
-                    <i class="fa fa-book"></i>
-                    <span><?php echo __('LABEL_CATE_MANAGEMENT'); ?></span>
-                </a>
-            </li>
-            
-            <li class="<?php if (in_array($controller, array('contacts'))) echo ' active ' ?>">
-                <a href="<?php echo $BASE_URL;?>/contacts">
-                    <i class="fa fa-user"></i>
-                    <span><?php echo __('LABEL_CONTACT_MANAGEMENT'); ?></span>
-                </a>
-            </li>
-            
-            <li class="<?php if (in_array($controller, array('weblinks'))) echo ' active ' ?>">
-                <a href="<?php echo $BASE_URL;?>/weblinks">
+            <li class="<?php if (in_array($controller, array('links'))) echo ' active ' ?>">
+                <a href="<?php echo $BASE_URL;?>/links">
                     <i class="fa fa-users"></i>
                     <span><?php echo __('LABEL_WEBLINK_MANAGEMENT'); ?></span>
                 </a>
