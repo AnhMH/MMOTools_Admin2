@@ -12,7 +12,7 @@
                             <th><?php echo __('LABEL_NAME'); ?></th>
                             <th><?php echo __('LABEL_TOKEN'); ?></th>
                             <th><?php echo __('LABEL_EMAIL'); ?></th>
-                            <th><?php echo __('LABEL_CREATED'); ?></th>
+                            <th><?php echo __('LABEL_UPDATED'); ?></th>
                             <th><?php echo __('LABEL_STATUS'); ?></th>
                         </tr>
                     </thead>
@@ -29,7 +29,7 @@
                                     <td><?php echo $val['name']; ?></td>
                                     <td><?php echo $this->Common->shortString($val['token'], 25) . '...'; ?></td>
                                     <td><?php echo $val['email']; ?></td>
-                                    <td><?php echo date('Y-m-d H:i', $val['created']); ?></td>
+                                    <td><?php echo date('Y-m-d H:i', $val['updated']); ?></td>
                                     <td><?php echo !empty($val['is_live']) ? "<span class='label label-success'>Live</span>" : "<span class='label label-danger'>Die</span>";?></td>
                                 </tr>
                             <?php endforeach; ?>

@@ -426,3 +426,6 @@ msgstr "Đóng"
 
 msgid "LABEL_GET_TOKEN"
 msgstr "Get token"
+
+msgid "LABEL_UPDATED"
+msgstr "Cập nhật"
