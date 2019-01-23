@@ -54,6 +54,8 @@
             <?php echo $this->element('footer'); ?>
             <!-- End Footer -->
         </div>
+        
+        <div class="loader" style="display: none;"><span></span></div>
 
         <script type="text/javascript">
             var controller = '<?php echo $controller; ?>';

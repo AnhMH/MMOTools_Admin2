@@ -47,6 +47,7 @@ function disableEnableMulti(type) {
  * Button actions
  */
 function buttonActions() {
+    var loader = $('.loader');
     $(".btn-disable").click(function () {
         return disableEnableMulti('disable');
     });
@@ -101,6 +102,28 @@ function buttonActions() {
         });
     });
     
+    $(".btn-update-pages").click(function() {
+        var items = getItemsChecked('items[]', ',');
+        if (items == '') {
+            showAlertModal('Vui lòng chọn');
+            return false;
+        }
+        var data = {
+            id: items
+        };
+        $.ajax({
+            type: "POST",
+            url: baseUrl + '/ajax/fbupdatepages',
+            data: data,
+            beforeSend: function () {
+                loader.show();
+            },
+            complete: function () {
+                location.reload();
+            }
+        });
+    });
+    
     $(".btn-check-live").click(function() {
         var items = getItemsChecked('items[]', ',');
         if (items == '') {
@@ -115,7 +138,7 @@ function buttonActions() {
             url: baseUrl + '/ajax/fbchecktoken',
             data: data,
             beforeSend: function () {
-                
+                loader.show();
             },
             complete: function () {
                 location.reload();

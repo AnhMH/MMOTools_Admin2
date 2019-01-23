@@ -429,3 +429,6 @@ msgstr "Get token"
 
 msgid "LABEL_UPDATED"
 msgstr "Cập nhật"
+
+msgid "LABEL_UPDATE_PAGE"
+msgstr "Cập nhật page"

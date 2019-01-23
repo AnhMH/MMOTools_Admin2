@@ -46,6 +46,9 @@
                     <button type="button" class="btn btn-success btn-check-live"><?php echo __('LABEL_CHECK_LIVE');?></button>
                 </div>
                 <div class="btn-group">
+                    <button type="button" class="btn btn-success btn-update-pages"><?php echo __('LABEL_UPDATE_PAGE');?></button>
+                </div>
+                <div class="btn-group">
                     <button type="button" class="btn btn-danger btn-disable-custom"><?php echo __('LABEL_DELETE');?></button>
                 </div>
             </div>
