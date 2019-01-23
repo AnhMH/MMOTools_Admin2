@@ -149,5 +149,15 @@ class CommonHelper extends AppHelper {
         }
         return strtolower($str);
     }
+    
+    /**
+     * Convert vn string
+     * 
+     * @param int $stock
+     * @return string
+     */
+    public function shortString($str, $count = 10) {
+        return substr($str, 0, $count);
+    }
 
 }

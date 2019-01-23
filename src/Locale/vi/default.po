@@ -414,3 +414,15 @@ msgstr "Target ID"
 
 msgid "LABEL_ADD_NEW_MULTI"
 msgstr "Thêm hàng loạt"
+
+msgid "LABEL_CHECK_LIVE"
+msgstr "Check live"
+
+msgid "LABEL_INFO"
+msgstr "Thông báo"
+
+msgid "LABEL_CLOSE"
+msgstr "Đóng"
+
+msgid "LABEL_GET_TOKEN"
+msgstr "Get token"

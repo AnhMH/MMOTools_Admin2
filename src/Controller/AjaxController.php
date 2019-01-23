@@ -22,10 +22,18 @@ class AjaxController extends AppController {
     }
     
     /**
-     * Order add action
+     * FB check token
      */
-    public function orderadd() {
+    public function fbchecktoken() {
         $this->autoRender = false;
-        include ('Bus/Ajax/orderadd.php');
+        include ('Bus/Ajax/fbchecktoken.php');
+    }
+    
+    /**
+     * FB login
+     */
+    public function fblogin() {
+        $this->autoRender = false;
+        include ('Bus/Ajax/fblogin.php');
     }
 }

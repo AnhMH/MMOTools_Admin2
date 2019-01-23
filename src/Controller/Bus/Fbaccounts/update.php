@@ -53,13 +53,18 @@ $this->UpdateForm->reset()
     ->addElement(array(
         'type' => 'submit',
         'value' => __('LABEL_SAVE'),
-        'class' => 'btn btn-primary',
+        'class' => 'btn btn-info',
     ))
     ->addElement(array(
         'type' => 'submit',
         'value' => __('LABEL_CANCEL'),
-        'class' => 'btn',
+        'class' => 'btn btn-danger',
         'onclick' => "return back();"
+    ))
+    ->addElement(array(
+        'type' => 'submit',
+        'value' => __('LABEL_GET_TOKEN'),
+        'class' => 'btn btn-primary btn-get-token',
     ));
 
 // Valdate and update

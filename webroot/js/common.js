@@ -18,44 +18,14 @@ $(document).ready(function ($) {
     });
 
     // Buttons action
-    $(".btn-disable").click(function () {
-        return disableEnableMulti('disable');
-    });
-    $(".btn-enable").click(function () {
-        return disableEnableMulti('enable');
-    });
-    $(".btn-addnew").click(function () {
-        if (controller == 'orders') {
-            location.href = baseUrl + '/' + controller + '/add';
-        } else {
-            location.href = baseUrl + '/' + controller + '/update';
-        }
-        return false;
-    });
-    $(".btn-addnew-multi").click(function () {
-        if (controller == 'orders') {
-            location.href = baseUrl + '/' + controller + '/add';
-        } else {
-            location.href = baseUrl + '/' + controller + '/updatemulti';
-        }
-        return false;
-    });
-    $(".btn-order-sell").click(function () {
-        location.href = baseUrl + '/' + controller + '/add?type=1';
-        return false;
-    });
-    $(".btn-order-buy").click(function () {
-        location.href = baseUrl + '/' + controller + '/add?type=2';
-        return false;
-    });
-
-    // Order
-    init_order();
+    buttonActions();
     
     $('#container_admins_setting #language_type').on('change', function(){
         var $val = $(this).val();
         location.href = baseUrl + '/' + controller + '/' + action + '/' + $val;
     });
+    
+    $('.table-data').DataTable();
 });
 
 /**
@@ -71,6 +41,123 @@ function disableEnableMulti(type) {
     }
     $("#action").val(type);
     return true;
+}
+
+/**
+ * Button actions
+ */
+function buttonActions() {
+    $(".btn-disable").click(function () {
+        return disableEnableMulti('disable');
+    });
+    $(".btn-enable").click(function () {
+        return disableEnableMulti('enable');
+    });
+    $(".btn-addnew").click(function () {
+        if (controller == 'orders') {
+            location.href = baseUrl + '/' + controller + '/add';
+        } else {
+            location.href = baseUrl + '/' + controller + '/update';
+        }
+        return false;
+    });
+    $(".btn-get-token").click(function () {
+        var url = baseUrl + '/fbaccounts/gettoken';
+        window.open(url, '_blank');
+        return false;
+    });
+    $(".btn-addnew-multi").click(function () {
+        if (controller == 'orders') {
+            location.href = baseUrl + '/' + controller + '/add';
+        } else {
+            location.href = baseUrl + '/' + controller + '/updatemulti';
+        }
+        return false;
+    });
+    
+    $(".btn-disable-custom").click(function () {
+        var items = getItemsChecked('items[]', ',');
+        if (items == '') {
+            showAlertModal('Vui lòng chọn');
+            return false;
+        }
+        var disable = 1;
+        var data = {
+            controller: controller,
+            action: action,
+            id: items,
+            disable: disable
+        };
+        $.ajax({
+            type: "POST",
+            url: baseUrl + '/ajax/disable',
+            data: data,
+            success: function (response) {
+                
+            },
+            complete: function () {
+                location.reload();
+            }
+        });
+    });
+    
+    $(".btn-check-live").click(function() {
+        var items = getItemsChecked('items[]', ',');
+        if (items == '') {
+            showAlertModal('Vui lòng chọn');
+            return false;
+        }
+        var data = {
+            id: items
+        };
+        $.ajax({
+            type: "POST",
+            url: baseUrl + '/ajax/fbchecktoken',
+            data: data,
+            beforeSend: function () {
+                
+            },
+            complete: function () {
+                location.reload();
+            }
+        });
+    });
+    
+    
+    $(".btn-fb-login").click(function () {
+        var email = $('#fbEmail').val();
+        var pass = $('#fbPass').val();
+        if (email == '' || pass == '') {
+            showAlertModal('Vui lòng nhập email và password');
+            return false;
+        }
+        var data = {
+            username: email,
+            password: pass
+        };
+        $.ajax({
+            type: "POST",
+            url: baseUrl + '/ajax/fblogin',
+            data: data,
+            beforeSend: function () {
+                
+            },
+            success: function (response) {
+                if (response.status == 'OK') {
+                    var ifrm = document.createElement("iframe");
+                    ifrm.setAttribute("src", response.data);
+                    ifrm.style.width = "100%";
+                    ifrm.style.height = "100%";
+                    $('#tokenContainer').html(ifrm);
+                } else {
+                    showAlertModal('Lỗi');
+                }
+            },
+            complete: function () {
+                
+            }
+        });
+    });
 }
 
 /**

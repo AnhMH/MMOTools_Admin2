@@ -22,4 +22,18 @@ class FbaccountsController extends AppController {
     public function update($id = '') {
         include ('Bus/Fbaccounts/update.php');
     }
+    
+    /**
+     * Get token
+     */
+    public function gettoken() {
+        include ('Bus/Fbaccounts/gettoken.php');
+    }
+    
+    /**
+     * Fb login
+     */
+    public function fblogin() {
+        include ('Bus/Fbaccounts/fblogin.php');
+    }
 }
