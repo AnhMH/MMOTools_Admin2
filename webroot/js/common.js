@@ -144,11 +144,8 @@ function buttonActions() {
             },
             success: function (response) {
                 if (response.status == 'OK') {
-                    var ifrm = document.createElement("iframe");
-                    ifrm.setAttribute("src", response.data);
-                    ifrm.style.width = "100%";
-                    ifrm.style.height = "100%";
-                    $('#tokenContainer').html(ifrm);
+                    var url = response.data;
+                    window.open(url, '_blank');
                 } else {
                     showAlertModal('Lỗi');
                 }
