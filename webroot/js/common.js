@@ -26,6 +26,53 @@ $(document).ready(function ($) {
     });
     
     $('.table-data').DataTable();
+    
+    $('#fbAccountSelect').on('change', function() {
+        var val = $(this).val();
+        var container = $('#fbPageSelect');
+        var data = {
+            fb_account_id: val
+        };
+        $.ajax({
+            type: "POST",
+            url: baseUrl + '/ajax/getfbpages',
+            data: data,
+            success: function (response) {
+                container.html(response);
+            },
+            complete: function () {
+                
+            }
+        });
+    });
+    
+    $('#reupSearch').on('click', function() {
+//        var loader = $('.loader');
+        var container = $('#reupSearchResult');
+        var source = $('#reupSource').val();
+        var type = $('#reupType').val();
+        var limit = $('#reupLimit').val();
+        var data = {
+            source: source,
+            type: type,
+            limit: limit
+        };
+        $.ajax({
+            type: "POST",
+            url: baseUrl + '/ajax/reupsearch',
+            data: data,
+            beforeSend: function () {
+//                loader.show();
+            },
+            success: function (response) {
+                container.html(response);
+                $('.table-data').DataTable();
+            },
+            complete: function () {
+//                loader.hide();
+            }
+        });
+    });
 });
 
 /**

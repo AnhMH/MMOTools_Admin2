@@ -22,7 +22,9 @@ if (!empty($id)) {
     // Create new
     $pageTitle = __('LABEL_ADD_NEW');
 }
-$fbAccounts = $this->Common->arrayKeyValue(Api::call(Configure::read('API.url_fbaccounts_all'), array()), 'id', 'name');
+$fbAccounts = $this->Common->arrayKeyValue(Api::call(Configure::read('API.url_fbaccounts_all'), array(
+    'is_live' => 1
+)), 'id', 'name');
 
 // Create breadcrumb
 $listPageUrl = h($this->BASE_URL . '/autocomments');

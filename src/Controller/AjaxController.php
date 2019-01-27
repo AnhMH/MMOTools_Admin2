@@ -44,4 +44,18 @@ class AjaxController extends AppController {
         $this->autoRender = false;
         include ('Bus/Ajax/fbupdatepage.php');
     }
+    
+    /**
+     * FB update page
+     */
+    public function getfbpages() {
+        include ('Bus/Ajax/getfbpages.php');
+    }
+    
+    /**
+     * Reup search
+     */
+    public function reupsearch() {
+        include ('Bus/Ajax/reupsearch.php');
+    }
 }
