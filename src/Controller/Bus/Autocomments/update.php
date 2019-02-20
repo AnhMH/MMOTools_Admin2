@@ -45,10 +45,10 @@ $this->UpdateForm->reset()
         'type' => 'hidden',
         'label' => __('id'),
     ))
-    ->addElement(array(
-        'id' => 'type',
-        'label' => __('LABEL_TYPE'),
-        'options' => Configure::read('Config.autoCommentTypes')
+        ->addElement(array(
+        'id' => 'title',
+        'label' => __('LABEL_TITLE'),
+        'type' => 'text'
     ))
     ->addElement(array(
         'id' => 'fb_postid',
@@ -62,15 +62,25 @@ $this->UpdateForm->reset()
         'rows' => 10
     ))
     ->addElement(array(
-        'id' => 'is_repeat',
-        'label' => __('LABEL_IS_REPEAT'),
-        'options' => Configure::read('Config.noYes')
-    ))
-    ->addElement(array(
         'id' => 'time_repeat',
         'label' => __('LABEL_TIME_REPEAT'),
         'options' => Configure::read('Config.timeRepeat')
     ))
+    ->addElement(array(
+        'id' => 'total_comment',
+        'label' => __('LABEL_TOTAL_COMMENT'),
+        'options' => Configure::read('Config.commentNumber')
+    ))
+//    ->addElement(array(
+//        'id' => 'time_start',
+//        'label' => __('LABEL_TIME_START'),
+//        'datetime' => true
+//    ))
+//    ->addElement(array(
+//        'id' => 'time_end',
+//        'label' => __('LABEL_TIME_END'),
+//        'type' => 'text'
+//    ))
     ->addElement(array(
         'type' => 'submit',
         'value' => __('LABEL_SAVE'),
@@ -95,6 +105,8 @@ if ($this->request->is('post')) {
     // Validation
     if ($form->validate($data)) {
         // Call API
+        $data['type'] = 1;
+        $data['add_comment_post'] = 1;
         $id = Api::call(Configure::read('API.url_autocomments_addupdate'), $data);
         $error = Api::getError();
         if (!empty($id) && !$error) {            

@@ -11,8 +11,9 @@
                             <th><?php echo __('LABEL_TITLE'); ?></th>
                             <th><?php echo __('LABEL_FB_TARGET_ID'); ?></th>
                             <th><?php echo __('LABEL_TOTAL_COMMENT'); ?></th>
-                            <th><?php echo __('LABEL_TIME_START'); ?></th>
-                            <th><?php echo __('LABEL_TIME_END'); ?></th>
+                            <th><?php echo __('LABEL_TIME_REPEAT'); ?></th>
+<!--                            <th><?php echo __('LABEL_TIME_START'); ?></th>
+                            <th><?php echo __('LABEL_TIME_END'); ?></th>-->
                             <th><?php echo __('LABEL_CREATED'); ?></th>
                             <th></th>
                         </tr>
@@ -29,8 +30,9 @@
                                     <td><?php echo $val['title']; ?></td>
                                     <td><a href="https://facebook.com//<?php echo $val['fb_id']; ?>/"><?php echo $val['fb_id']; ?></a></td>
                                     <td><?php echo $val['total_comment']; ?></td>
-                                    <td><?php echo !empty($val['time_start']) ? date('Y-m-d H:i', $val['time_start']) : '-'; ?></td>
-                                    <td><?php echo !empty($val['time_end']) ? date('Y-m-d H:i', $val['time_end']) : '-'; ?></td>
+                                    <td><?php echo $val['time_repeat']; ?></td>
+<!--                                    <td><?php echo !empty($val['time_start']) ? date('Y-m-d H:i', $val['time_start']) : '-'; ?></td>
+                                    <td><?php echo !empty($val['time_end']) ? date('Y-m-d H:i', $val['time_end']) : '-'; ?></td>-->
                                     <td><?php echo !empty($val['created']) ? date('Y-m-d H:i', $val['created']) : '-'; ?></td>
                                     <td><a href="<?php echo $BASE_URL.'/autocomments/detail/'.$val['id'];?>"><span class="label label-primary"><?php echo __('LABEL_DETAIL');?></span></a></td>
                                 </tr>
