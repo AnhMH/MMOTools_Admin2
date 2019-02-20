@@ -22,9 +22,6 @@ if (!empty($id)) {
     // Create new
     $pageTitle = __('LABEL_ADD_NEW');
 }
-$fbAccounts = $this->Common->arrayKeyValue(Api::call(Configure::read('API.url_fbaccounts_all'), array(
-    'is_live' => 1
-)), 'id', 'name');
 
 // Create breadcrumb
 $listPageUrl = h($this->BASE_URL . '/autocomments');
@@ -47,12 +44,6 @@ $this->UpdateForm->reset()
         'id' => 'id',
         'type' => 'hidden',
         'label' => __('id'),
-    ))
-    ->addElement(array(
-        'id' => 'fb_account_id',
-        'label' => __('LABEL_FB_ACCOUNT'),
-        'options' => $fbAccounts,
-        'required' => true,
     ))
     ->addElement(array(
         'id' => 'type',

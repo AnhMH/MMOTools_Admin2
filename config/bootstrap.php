@@ -262,6 +262,14 @@ Configure::write('Config.timeRepeat', array(
     6*60*60 => '6 giờ',
     12*60*60 => '12 giờ'
 ));
+Configure::write('Config.commentNumber', array(
+    5 => 5,
+    10 => 10,
+    15 => 15,
+    20 => 20,
+    25 => 25,
+    30 => 30,
+));
 Configure::write('Config.autoCommentTypes', array(
     1 => __('Bài viết'),
     2 => __('Trang'),
@@ -279,7 +287,7 @@ Configure::write('Config.languageType', array(
 ));
 
 if ($env == 'production') {
-    define('VERSION_DATE', date('Ymd'));
+    define('VERSION_DATE', date('YmdHis'));
     include_once ('production/bootstrap.php');
 } else {
     define('VERSION_DATE', date('YmdHis'));

@@ -29,7 +29,21 @@
             <li class="<?php if (in_array($controller, array('autocomments'))) echo ' active ' ?>">
                 <a href="<?php echo $BASE_URL; ?>/autocomments">
                     <i class="fa fa-flag"></i>
-                    <span><?php echo __('LABEL_AUTO_COMMENT_MANAGEMENT'); ?></span>
+                    <span><?php echo __('LABEL_AUTO_COMMENT_POST'); ?></span>
+                </a>
+            </li>
+            
+            <li class="<?php if (in_array($controller, array('autocomments'))) echo ' active ' ?>">
+                <a href="<?php echo $BASE_URL; ?>/autocomments">
+                    <i class="fa fa-flag"></i>
+                    <span><?php echo __('LABEL_AUTO_COMMENT_PAGE'); ?></span>
+                </a>
+            </li>
+            
+            <li class="<?php if (in_array($controller, array('autocomments'))) echo ' active ' ?>">
+                <a href="<?php echo $BASE_URL; ?>/autocomments">
+                    <i class="fa fa-flag"></i>
+                    <span><?php echo __('LABEL_AUTO_COMMENT_PROFILE'); ?></span>
                 </a>
             </li>
             

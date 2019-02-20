@@ -432,3 +432,18 @@ msgstr "Cập nhật"
 
 msgid "LABEL_UPDATE_PAGE"
 msgstr "Cập nhật page"
+
+msgid "LABEL_AUTO_COMMENT_POST"
+msgstr "Auto comment post"
+
+msgid "LABEL_AUTO_COMMENT_PAGE"
+msgstr "Auto comment page"
+
+msgid "LABEL_AUTO_COMMENT_PROFILE"
+msgstr "Auto comment profile"
+
+msgid "LABEL_TIME_START"
+msgstr "Time start"
+
+msgid "LABEL_TIME_END"
+msgstr "Time end"
