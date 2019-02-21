@@ -251,6 +251,10 @@ Configure::write('Config.noYes', array(
     1 => __('Yes'),
 ));
 Configure::write('Config.timeRepeat', array(
+    60 => '1 phút',
+    2*60 => '2 phút',
+    3*60 => '3 phút',
+    4*60 => '4 phút',
     5*60 => '5 phút',
     10*60 => '10 phút',
     20*60 => '20 phút',

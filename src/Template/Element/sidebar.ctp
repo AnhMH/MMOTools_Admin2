@@ -19,13 +19,6 @@
                 </a>
             </li>
             
-            <li class="<?php if (in_array($controller, array('fbaccounts'))) echo ' active ' ?>">
-                <a href="<?php echo $BASE_URL; ?>/fbaccounts">
-                    <i class="fa fa-newspaper-o"></i>
-                    <span><?php echo __('LABEL_FB_ACCOUNT_MANAGEMENT'); ?></span>
-                </a>
-            </li>
-            
             <li class="<?php if (in_array($controller, array('autocomments'))) echo ' active ' ?>">
                 <a href="<?php echo $BASE_URL; ?>/autocomments">
                     <i class="fa fa-flag"></i>
@@ -33,24 +26,10 @@
                 </a>
             </li>
             
-            <li class="<?php if (in_array($controller, array('autocomments'))) echo ' active ' ?>">
-                <a href="<?php echo $BASE_URL; ?>/autocomments">
+            <li class="<?php if (in_array($controller, array('autocommentpages'))) echo ' active ' ?>">
+                <a href="<?php echo $BASE_URL; ?>/autocommentpages">
                     <i class="fa fa-flag"></i>
                     <span><?php echo __('LABEL_AUTO_COMMENT_PAGE'); ?></span>
-                </a>
-            </li>
-            
-            <li class="<?php if (in_array($controller, array('autocomments'))) echo ' active ' ?>">
-                <a href="<?php echo $BASE_URL; ?>/autocomments">
-                    <i class="fa fa-flag"></i>
-                    <span><?php echo __('LABEL_AUTO_COMMENT_PROFILE'); ?></span>
-                </a>
-            </li>
-            
-            <li class="<?php if (in_array($controller, array('links'))) echo ' active ' ?>">
-                <a href="<?php echo $BASE_URL;?>/links">
-                    <i class="fa fa-users"></i>
-                    <span><?php echo __('LABEL_WEBLINK_MANAGEMENT'); ?></span>
                 </a>
             </li>
             
@@ -63,11 +42,6 @@
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li class="<?php if ($controller == 'admins' && in_array($action, array('setting'))) echo ' active ' ?>">
-                        <a href="<?php echo $BASE_URL; ?>/admins/setting">
-                            <i class="fa fa-circle-o"></i> <?php echo __('LABEL_WEB_SETTING');?>
-                        </a>
-                    </li>
                     <li class="<?php if ($controller == 'admins' && in_array($action, array('updateprofile'))) echo ' active ' ?>">
                         <a href="<?php echo $BASE_URL; ?>/admins/updateprofile">
                             <i class="fa fa-circle-o"></i> <?php echo __('LABEL_UPDATE_PROFILE');?>

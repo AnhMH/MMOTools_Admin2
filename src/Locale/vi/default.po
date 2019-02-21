@@ -447,3 +447,6 @@ msgstr "Time start"
 
 msgid "LABEL_TIME_END"
 msgstr "Time end"
+
+msgid "LABEL_PAGE_ID"
+msgstr "Page ID"

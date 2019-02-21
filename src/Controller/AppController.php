@@ -243,7 +243,8 @@ class AppController extends Controller
                     case 'enable':
                     case 'disable':
                         $param['disable'] = ($data['action'] == 'disable' ? 1 : 0);
-                        Api::call("{$this->request->params['controller']}/disable", $param);
+                        $controller = $this->request->params['controller'];
+                        Api::call("{$controller}/disable", $param);
                         $error = Api::getError();
                         if ($error) {
                             AppLog::warning("Can not update", __METHOD__, $data);
