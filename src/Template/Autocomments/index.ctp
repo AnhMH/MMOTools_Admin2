@@ -44,7 +44,7 @@
                     <button type="button" class="btn btn-info btn-addnew"><?php echo __('LABEL_ADD_NEW');?></button>
                 </div>
                 <div class="btn-group">
-                    <button type="button" class="btn btn-danger btn-disable"><?php echo __('LABEL_DELETE');?></button>
+                    <button type="button" class="btn btn-danger btn-disable-custom"><?php echo __('LABEL_DELETE');?></button>
                 </div>
             </div>
         </div>
