@@ -28,7 +28,7 @@
                                         </div>
                                     </td>
                                     <td><?php echo $val['title']; ?></td>
-                                    <td><a href="https://facebook.com//<?php echo $val['fb_id']; ?>/"><?php echo $val['fb_id']; ?></a></td>
+                                    <td><a href="https://facebook.com//<?php echo $val['fb_id']; ?>/" target="_blank"><?php echo $val['fb_id']; ?></a></td>
                                     <td><?php echo $val['total_comment']; ?></td>
                                     <td><?php echo $val['time_repeat']; ?></td>
 <!--                                    <td><?php echo !empty($val['time_start']) ? date('Y-m-d H:i', $val['time_start']) : '-'; ?></td>

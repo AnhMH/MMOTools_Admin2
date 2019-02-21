@@ -24,6 +24,13 @@ class AutocommentsController extends AppController {
     }
     
     /**
+     * Add/update info
+     */
+    public function detail($id = '') {
+        include ('Bus/Autocomments/detail.php');
+    }
+    
+    /**
      * Add/update multi
      */
     public function updatemulti() {
